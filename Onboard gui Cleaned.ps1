@@ -3,29 +3,29 @@
 [void] [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms") 
 
 $Form                            = New-Object system.Windows.Forms.Form
-$Form.ClientSize                 = '661,757'
+$Form.ClientSize                 = '1080,720'
 $Form.text                       = "Form"
 $Form.TopMost                    = $false
 
 $TBfirstName                     = New-Object system.Windows.Forms.TextBox
 $TBfirstName.multiline           = $false
-$TBfirstName.width               = 143
+$TBfirstName.width               = 150
 $TBfirstName.height              = 20
-$TBfirstName.location            = New-Object System.Drawing.Point(120,68)
+$TBfirstName.location            = New-Object System.Drawing.Point(314,58)
 $TBfirstName.Font                = 'Microsoft Sans Serif,10'
 
 $TBlastName                      = New-Object system.Windows.Forms.TextBox
 $TBlastName.multiline            = $false
 $TBlastName.width                = 143
 $TBlastName.height               = 20
-$TBlastName.location             = New-Object System.Drawing.Point(121,105)
+$TBlastName.location             = New-Object System.Drawing.Point(621,58)
 $TBlastName.Font                 = 'Microsoft Sans Serif,10'
 
 $CBDepartment                       = New-Object system.Windows.Forms.ComboBox
 $CBDepartment.text                  = "Select Department"
-$CBDepartment.width                 = 179
+$CBDepartment.width                 = 175
 $CBDepartment.height                = 20
-$CBDepartment.location              = New-Object System.Drawing.Point(37,145)
+$CBDepartment.location              = New-Object System.Drawing.Point(313,100)
 $CBDepartment.Font                  = 'Microsoft Sans Serif,10'
 
 $LBFname                           = New-Object system.Windows.Forms.Label
@@ -33,7 +33,7 @@ $LBFname.text                      = "First Name"
 $LBFname.AutoSize                  = $true
 $LBFname.width                     = 25
 $LBFname.height                    = 10
-$LBFname.location                  = New-Object System.Drawing.Point(37,70)
+$LBFname.location                  = New-Object System.Drawing.Point(231,62)
 $LBFname.Font                      = 'Microsoft Sans Serif,10'
 $LBFname.ForeColor               = "Firebrick"
 
@@ -42,51 +42,67 @@ $LBLname.text                      = "Last Name"
 $LBLname.AutoSize                  = $true
 $LBLname.width                     = 13
 $LBLname.height                    = 10
-$LBLname.location                  = New-Object System.Drawing.Point(36,110)
+$LBLname.location                  = New-Object System.Drawing.Point(536,62)
 $LBLname.Font                      = 'Microsoft Sans Serif,10'
 $LBLname.ForeColor               = "Firebrick"
 
 $CBSubDepartment                       = New-Object system.Windows.Forms.ComboBox
-$CBSubDepartment.text                  = "Select Sub Department"
-$CBSubDepartment.width                 = 181
+$CBSubDepartment.text                  = "" #"Select Sub Department"
+$CBSubDepartment.width                 = 175
 $CBSubDepartment.height                = 20
-$CBSubDepartment.location              = New-Object System.Drawing.Point(36,181)
+$CBSubDepartment.location              = New-Object System.Drawing.Point(622,100)
 $CBSubDepartment.Font                  = 'Microsoft Sans Serif,10'
 
 $CBJobTitle                        = New-Object system.Windows.Forms.ComboBox
 $CBJobTitle.text                   = "Select Job Title"
-$CBJobTitle.width                  = 260
+$CBJobTitle.width                  = 275
 $CBJobTitle.height                 = 20
-$CBJobTitle.location               = New-Object System.Drawing.Point(36,219)
+$CBJobTitle.location               = New-Object System.Drawing.Point(313,142)
 $CBJobTitle.Font                   = 'Microsoft Sans Serif,10'
 
 $CkBcreateEmail                  = New-Object system.Windows.Forms.CheckBox
-$CkBcreateEmail.text             = "Create Email Account"
+$CkBcreateEmail.text             = "Email"
 $CkBcreateEmail.AutoSize         = $false
-$CkBcreateEmail.width            = 179
+$CkBcreateEmail.width            = 95
 $CkBcreateEmail.height           = 20
-$CkBcreateEmail.location         = New-Object System.Drawing.Point(36,260)
+$CkBcreateEmail.location         = New-Object System.Drawing.Point(315,228)
 $CkBcreateEmail.Font             = 'Microsoft Sans Serif,10'
+
+$CkBaccountEnabled               = New-Object system.Windows.Forms.CheckBox
+$CkBaccountEnabled.text          = "Enable Account"
+$CkBaccountEnabled.AutoSize      = $true
+$CkBaccountEnabled.width         = 95
+$CkBaccountEnabled.height        = 20
+$CkBaccountEnabled.location      = New-Object System.Drawing.Point(410,228)
+$CkBaccountEnabled.Font          = 'Microsoft Sans Serif,10'
+
+$CkBchangePassword               = New-Object system.Windows.Forms.CheckBox
+$CkBchangePassword.text          = "Password Must be Changed"
+$CkBchangePassword.AutoSize      = $true
+$CkBchangePassword.width         = 95
+$CkBchangePassword.height        = 20
+$CkBchangePassword.location      = New-Object System.Drawing.Point(563,228)
+$CkBchangePassword.Font          = 'Microsoft Sans Serif,10'
 
 $BTcreateAccount                 = New-Object system.Windows.Forms.Button
 $BTcreateAccount.text            = "Create Account"
-$BTcreateAccount.width           = 147
+$BTcreateAccount.width           = 150
 $BTcreateAccount.height          = 30
-$BTcreateAccount.location        = New-Object System.Drawing.Point(36,381)
+$BTcreateAccount.location        = New-Object System.Drawing.Point(413,264)
 $BTcreateAccount.Font            = 'Microsoft Sans Serif,10'
 $BTcreateAccount.ForeColor       = ""
 $BTcreateAccount.Enabled         = $false
 
 $InfoBox                         = New-Object system.Windows.Forms.TextBox
 $InfoBox.multiline               = $true
-$InfoBox.width                   = 586
-$InfoBox.height                  = 220
-$InfoBox.location                = New-Object System.Drawing.Point(37,466)
+$InfoBox.width                   = 1000
+$InfoBox.height                  = 275
+$InfoBox.location                = New-Object System.Drawing.Point(40,380)
 $InfoBox.Font                    = 'Microsoft Sans Serif,10'
 $InfoBox.ReadOnly                = $true
 $InfoBox.ScrollBars              = "Vertical"
 
-$Form.controls.AddRange(@($TBfirstName,$TBlastName,$CBDepartment,$LBFname,$LBLname,$CBSubDepartment,$CBJobTitle,$CkBcreateEmail,$BTcreateAccount,$InfoBox))
+$Form.controls.AddRange(@($TBfirstName,$TBlastName,$CBDepartment,$LBFname,$LBLname,$CBSubDepartment,$CBJobTitle,$CkBcreateEmail,$CkBaccountEnabled,$CkBchangePassword,$BTcreateAccount,$InfoBox))
 
 
 $objForm = New-Object System.Windows.Forms.Form 
@@ -123,19 +139,58 @@ $objForm.Controls.Add($MaskedTextBox)
 $objForm.Topmost = $True
 $objForm.Add_Shown({$objForm.Activate()})
 
+$CBDepartment.add_selectedindexchanged($CBDepartment_SelectedIndexChanged)
+$CBSubDepartment.add_selectedindexchanged($CBSubDepartment_SelectedIndexChanged)
+$CBJobTitle.add_selectedindexchanged($CBJobTitle_SelectedIndexChanged)
+$BTcreateAccount.Add_Click($BTcreateAccount_Click)
+$InfoBox.Add_TextChanged($InfoBox_TextChanged)
+
+$TBfirstName.Add_TextChanged({ 
+    if($TBfirstName.TextLength -gt 0)
+        { $LBFname.ForeColor = "Black"}
+    else
+        { $LBFname.ForeColor = "Firebrick" }
+    evaluateInfoComplete
+})
+$TBlastName.Add_TextChanged({ 
+    if($TBlastName.TextLength -gt 0)
+        { $LBLname.ForeColor = "Black"}
+    else
+        { $LBLname.ForeColor = "Firebrick" }
+    evaluateInfoComplete
+})
 
 $CBDepartment.DisplayMember = 'Name'
 $CBSubDepartment.DisplayMember = 'Name'
 $CBJobTitle.DisplayMember = 'Name'
 
-# Global Variables
-#$global:SubDepts
-#$global:Titles
-#$global:Title
-#$global:TitleDN
-#$Path = $null
+##########################################
+##### Global Variables and Functions #####
+##########################################
 $Global:Attempts = 12
+$Global:Domain = "@gardencityks.us"
+$Global:ProxyDomain = "@gardencityksus.mail.onmicrosoft.com"
 
+#region Get-DateSortable
+function Get-datesortable
+{
+	$global:datesortable = Get-Date -Format "HH':'mm':'ss"
+	return $global:datesortable
+}#endregion Get-DateSortable
+
+#region Add-Logs
+function Add-Logs
+{
+	[CmdletBinding()]
+	param ($text)
+	Get-datesortable
+    $InfoBox.Text += "[$global:datesortable] - $text`r`n"
+	Set-Alias alogs Add-Logs -Description "Add content to the TextBoxLogs"
+	Set-Alias Add-Log Add-Logs -Description "Add content to the TextBoxLogs"
+}
+
+##### End Global Variables and functions #####
+##############################################
 
 # Finds Main Department
 $Mains = Get-ADOrganizationalUnit -SearchBase 'OU=Garden City,DC=GardenCityks,DC=US' -Filter {description -like "D - *"} | select name,distinguishedname | sort name
@@ -151,10 +206,9 @@ $CBDepartment_SelectedIndexChanged = {
     $MainDept = $CBDepartment.SelectedItem.distinguishedname
     $SubFind = Get-ADOrganizationalUnit -Searchbase $MainDept -SearchScope OneLevel -Filter {Name -like "Us*"} | select name,distinguishedname | sort name
     $CBSubDepartment.items.Clear()
-    $CBSubDepartment.Text = "Select Sub Department"
+    #$CBSubDepartment.Text = "Select Sub Department"
     clearTitle
-    #$Global:Path = $null
-
+    evaluateInfoComplete
     If ($SubFind){
         $SubDepts = 'null'
     
@@ -163,9 +217,7 @@ $CBDepartment_SelectedIndexChanged = {
         foreach($job in $Titles){
             $CBJobTitle.items.Add($job)
             }
-    
-        #[String]$Path = Get-ADOrganizationalUnit -SearchBase $MainDept -Filter {Name -like "US*"}
- 
+        $CBSubDepartment.Text = ""
     }
 
     Else{
@@ -173,79 +225,56 @@ $CBDepartment_SelectedIndexChanged = {
         foreach($dept in $SubDepts){
             $CBSubDepartment.items.Add($dept)
             }
+        $CBSubDepartment.Text = "Select Sub Department"
         }
 }
-
 
 $CBSubDepartment_SelectedIndexChanged = {
     clearTitle
     $MainDept = $CBDepartment.SelectedItem.distinguishedname
-    #$SubDepts = Get-ADOrganizationalUnit -SearchBase $MainDept -SearchScope OneLevel -Filter {Description -like "*"} | select name,distinguishedname | sort name
     $SubDept = $CBSubDepartment.SelectedItem.distinguishedname
 
     $Titles = Get-ADGroup -Searchbase $SubDept -Filter {description -like "RBAC*"} | select name,distinguishedname | sort name
-    Write-Host $CBJobTitle.SelectedIndex
+    #Write-Host "JobTitle selected index: " $CBJobTitle.SelectedIndex
     foreach($job in $Titles){
         $CBJobTitle.items.Add($job)
         }
-    
-    #[String]$Global:Path = Get-ADOrganizationalUnit -SearchBase $SubDept -Filter {Name -like "US*"}
 }
 
 $CBJobTitle_SelectedIndexChanged = {
-    if ($CBDepartment.SelectedIndex -ge 0 -and $CBJobTitle.SelectedIndex -ge 0 -and $TBFirstName.TextLength -gt 0 -and $TBLastName.TextLength -gt 0) {
-            $BTcreateAccount.Enabled = $true
-            }
-        else {
-            $BTcreateAccount.Enabled = $false
-            }
-    Write-Host $CBJobTitle.SelectedIndex
+    evaluateInfoComplete
 }
-
-$CBDepartment.add_selectedindexchanged($CBDepartment_SelectedIndexChanged)
-$CBSubDepartment.add_selectedindexchanged($CBSubDepartment_SelectedIndexChanged)
-$CBJobTitle.add_selectedindexchanged($CBJobTitle_SelectedIndexChanged)
-$BTcreateAccount.Add_Click($BTcreateAccount_Click)
-$TBfirstName.Add_TextChanged({ 
-    if($TBfirstName.TextLength -gt 0)
-        { $LBFname.ForeColor = "Black"}
-    else
-        { $LBFname.ForeColor = "Firebrick" }
-    if ($CBDepartment.SelectedIndex -ge 0 -and $CBJobTitle.SelectedIndex -ge 0 -and $TBFirstName.TextLength -gt 0 -and $TBLastName.TextLength -gt 0) {
-            $BTcreateAccount.Enabled = $true
-            }
-        else {
-            $BTcreateAccount.Enabled = $false
-            }
-})
-$TBlastName.Add_TextChanged({ 
-    if($TBlastName.TextLength -gt 0)
-        { $LBLname.ForeColor = "Black"}
-    else
-        { $LBLname.ForeColor = "Firebrick" }
-    if ($CBDepartment.SelectedIndex -ge 0 -and $CBJobTitle.SelectedIndex -ge 0 -and $TBFirstName.TextLength -gt 0 -and $TBLastName.TextLength -gt 0) {
-            $BTcreateAccount.Enabled = $true
-            }
-        else {
-            $BTcreateAccount.Enabled = $false
-            }
-})
-
 
 $BTcreateAccount_Click = {
-    #$MainDept = $Mains[$CBDepartment.SelectedIndex].distinguishedname
     $MainDept = $CBDepartment.SelectedItem.distinguishedname
-    #$SubDepts = Get-ADOrganizationalUnit -SearchBase $MainDept -SearchScope OneLevel -Filter {Description -like "*"} | select name,distinguishedname | sort name
-    Write-Host $MainDept
+
     if ($CBSubDepartment.items.Count -gt 0) {
         $SubDept = $CBSubDepartment.SelectedItem.distinguishedname
-        Write-Host $SubDept
+        [String]$Path = Get-ADOrganizationalUnit -SearchBase $SubDept -Filter {Name -like "US*"}
     }
+    else {
+    [String]$Path = Get-ADOrganizationalUnit -SearchBase $MainDept -Filter {Name -like "US*"}
+    }
+ 
     $Title = $CBJobTitle.SelectedItem.name
     $TitleDN = $CBJobTitle.SelectedItem.distinguishedname
-    Write-Host $Title
-    Write-Host $TitleDN
+ 
+    $FirstName = $TBfirstName.Text -replace '\s',''
+    $LastName = $TBlastName.Text -replace '\s',''
+    Add-Logs -text "LOG: Main Department is: "
 }
+
+$InfoBox_TextChanged = {
+	$InfoBox.SelectionStart = $InfoBox.TextLength;
+	$InfoBox.ScrollToCaret()
+	$InfoBox.Focus()
+		
+	If ($Global:ExternalLog -ne $null)
+	{
+		$InfoBox.Text | Out-File $Global:ExternalLog 
+    }
+}
+
 
 
 # Function - Create Active Directory account
@@ -262,23 +291,14 @@ function createAD {
 
     $MailNickName = $FirstName+$LastName
 
-    $UserPrincipalName = $FirstLower + '.' + $LastLower + '@gardencityks.us'
+    $UserPrincipalName = $FirstLower + '.' + $LastLower + $Global:Domain
 
-    $RemoteRoutingAddress = $FirstLower + '.' + $LastLower + '@gardencityksus.mail.onmicrosoft.com'
+    $RemoteRoutingAddress = $FirstLower + '.' + $LastLower + $Global:ProxyDomain
 
-    $ProxyEmailAddress = $FirstLower + '.' + $LastLower + '@gardencityksus.mail.onmicrosoft.com'
+    $ProxyEmailAddress = $FirstLower + '.' + $LastLower + $Global:ProxyDomain
 
-    $EmailAddress = $FirstLower + '.' + $LastLower + '@gardencityks.us'
+    $EmailAddress = $FirstLower + '.' + $LastLower + $Global:Domain
 
-    # Make sure both first and last names were given
-    if (!$FirstName -or !$LastName){
-        $InfoBox.AppendText("Please enter the user's name `r`n`r`n")
-        Return
-    }
-    # Make sure the AD path is specified
-    if (!$global:Path){
-        $InfoBox.Text = "Please select a department"
-    }
     # Prompt for the new user's password
     [void] $objForm.ShowDialog()
     $password = $MaskedTextBox.Text
@@ -331,11 +351,11 @@ function createAD {
         #if ($MailboxCode -eq 1){
         #    Return
         #}
-        assignO365License $SAMAccountName $UserPrincipalName
+        
     }
 }
     
-function enableMailbox($SAMAccountName, $RemoteRoutingAddress) {
+function enableMailbox {
     #This part of the script connects to a Powershell session via the on-prem exchange 2016 server (hybrid environment).
     $HybridSession = New-PSSession –ConfigurationName Microsoft.Exchange –ConnectionUri http://ITC-sv16EHVM/powershell -Authentication Kerberos 
 
@@ -437,6 +457,15 @@ function clearTitle {
     $CBJobTitle.SelectedIndex = -1
     #$global:Title = $null
     #$global:TitleDN = $null
+}
+
+function evaluateInfoComplete {
+    if ($CBDepartment.SelectedIndex -ge 0 -and $CBJobTitle.SelectedIndex -ge 0 -and $TBFirstName.TextLength -gt 0 -and $TBLastName.TextLength -gt 0) {
+        $BTcreateAccount.Enabled = $true
+        }
+    else {
+        $BTcreateAccount.Enabled = $false
+        }
 }
 
 function Main{
